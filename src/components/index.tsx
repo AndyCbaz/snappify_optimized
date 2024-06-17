@@ -8,5 +8,3 @@ export const ButtonGroup = lazy(
   () => import("../components/CustomButtonGroup"),
 );
 export const Text = lazy(() => import("../components/CustomText"));
-export const IconButton = lazy(() => import("../components/CustomIconButton"));
-export const Icon = lazy(() => import("../components/CustomIcon"));

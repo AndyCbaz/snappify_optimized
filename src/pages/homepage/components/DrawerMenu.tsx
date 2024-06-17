@@ -1,17 +1,18 @@
-import {
-  Drawer,
-  DrawerBody,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-} from "@chakra-ui/react";
-import { Box, Icon, Image, Text, Button } from "@chakra-ui/react";
-import { IoIosArrowForward } from "react-icons/io";
+import React from "react";
+// chakra ui
+import { DrawerContent, DrawerCloseButton } from "@chakra-ui/react";
+import { DrawerHeader, DrawerOverlay } from "@chakra-ui/react";
+import { Drawer, DrawerBody, Icon } from "@chakra-ui/react";
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
-import { GrLanguage } from "react-icons/gr";
+// custom components
+import { Box, Image, Text, Button } from "../../../components";
+// hooks
 import { useTranslation } from "react-i18next";
+// helpers
 import { scrollToSection } from "../../../helpers/scrollToSection";
+// icons
+import { IoIosArrowForward } from "react-icons/io";
+import { GrLanguage } from "react-icons/gr";
 
 interface DrawerComponentProps {
   isOpen: boolean;
@@ -19,7 +20,7 @@ interface DrawerComponentProps {
   onClose: () => void;
   logo: string;
   btnDrawerRef: React.RefObject<HTMLButtonElement>;
-  refList: {ref: React.RefObject<HTMLElement>, title: string}[];
+  refList: { ref: React.RefObject<HTMLElement>; title: string }[];
 }
 
 const DrawerComponent: React.FC<DrawerComponentProps> = ({
@@ -29,12 +30,11 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({
   btnDrawerRef,
   refList,
 }) => {
+  const { i18n } = useTranslation();
 
-     const { i18n } = useTranslation();
-
-     const changeLanguage = (lng: string) => {
-       i18n.changeLanguage(lng);
-     };
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
   return (
     <>
       <Drawer
@@ -49,7 +49,7 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({
           <DrawerCloseButton color="primary.200" />
           <DrawerHeader className="bg-green-800">
             <Box id="logo-container-drawer">
-              <Image src={logo} alt="Snappiffy Logo" w="200px" />
+              <Image loading="lazy" src={logo} alt="Snappiffy Logo" w="200px" />
             </Box>
           </DrawerHeader>
 
@@ -94,30 +94,6 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({
               </Box>
             ))}
           </DrawerBody>
-          {/* <DrawerFooter className="flex flex-col justify-start gap-4">
-            <Text color="primary.200" className="text-xl font-bold">
-              Contact us
-            </Text>
-            <Box className="flex w-full items-center gap-4">
-              <Icon
-                as={MdOutlinePhonelinkRing}
-                boxSize={6}
-                color="primary.200"
-              />
-              <Text color="primary.200" className="text-lg font-bold">
-                +1 (234) 234234
-              </Text>
-            </Box>
-            <Box className="flex w-full items-center gap-4">
-              <Icon as={MdOutlineEmail} boxSize={6} color="primary.200" />
-
-              <Text color="primary.200" className="text-sm font-bold">
-                <Link href={`mailto:snappiffy@business@gmail.com`} isExternal>
-                  snappiffy@business@gmail.com
-                </Link>
-              </Text>
-            </Box>
-          </DrawerFooter> */}
         </DrawerContent>
       </Drawer>
     </>
