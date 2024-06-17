@@ -1,7 +1,7 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
+import { Box, Button } from "../components";
 
-const Box = lazy(() => import("../components/CustomBox"));
-const Button = lazy(() => import("../components/CustomButton"));
+
 
 const HomePage: React.FC = () => {
   return (
