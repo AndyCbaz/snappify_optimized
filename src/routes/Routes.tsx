@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { useRoutes, useLocation } from "react-router-dom";
 
 // Importación de componentes de forma dinámica
-const HomePage = React.lazy(() => import("../pages/HomePage"));
+const HomePage = React.lazy(() => import("../pages/homepage/HomePage"));
 const PrivacyPolicy = React.lazy(() => import("../pages/PrivacyPolicyPage"));
 const NotFound = React.lazy(() => import("../pages/NotFoundPage"));
 
