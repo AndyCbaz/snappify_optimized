@@ -37,7 +37,6 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
           src={logo}
           alt="Snappiffy Logo"
           className="w-[250px]"
-          loading="lazy"
         />
       </Box>
       {/* nav bar */}

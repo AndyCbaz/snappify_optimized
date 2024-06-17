@@ -49,7 +49,7 @@ const DrawerComponent: React.FC<DrawerComponentProps> = ({
           <DrawerCloseButton color="primary.200" />
           <DrawerHeader className="bg-green-800">
             <Box id="logo-container-drawer">
-              <Image loading="lazy" src={logo} alt="Snappiffy Logo" w="200px" />
+              <Image src={logo} alt="Snappiffy Logo" w="200px" />
             </Box>
           </DrawerHeader>
 
