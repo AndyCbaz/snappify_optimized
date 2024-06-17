@@ -1,0 +1,27 @@
+{
+  "header": {
+    "nav1": "Section 1",
+    "nav2": "Section 2",
+    "nav3": "Section 3",
+    "nav4": "Section 4",
+    "nav5": "Section 5",
+    "nav6": "Section 6",
+    "nav7": "Section 7"
+  },
+  "section1": {
+    "word1": "AI- Integrated mobile Apps for business",
+    "word2": "AI- Integrated Internal apps",
+    "word3": "AI- Integrated Marketplaces",
+    "word4": "AI- Integrated Websites",
+    "word5": "AI- Integrated CRM",
+    "word6": "AI- Integrated MVP's",
+    "title": "tailored to your needs",
+    "title2": "Bring your business idea to life in just a few weeks starting from $2,999",
+    "quality1": "Cheaper",
+    "quality2": "Faster",
+    "quality3": "Smarter",
+    "quality4": "Scalable",
+    "button": "Book a free visit",
+    "phrase": "AI is changing the game rules in every industries. If you don't incorporate it into your company, your competition will."
+  }
+}
